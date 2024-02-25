@@ -37,7 +37,7 @@ const Header = () => {
     const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
     return (
-        <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black">
+        <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-black">
             {loading && <Loader />}
 
             <div className="flex h-5 items-center">
@@ -55,13 +55,8 @@ const Header = () => {
                 )}
                 <Link to="/" className="flex h-5 items-center">
                     <img
-                        className="h-full hidden dark:md:block"
+                        className="h-full dark:md:block"
                         src={ytLogo}
-                        alt="Youtube"
-                    />
-                    <img
-                        className="h-full md:hidden"
-                        src={ytLogoMobile}
                         alt="Youtube"
                     />
                 </Link>

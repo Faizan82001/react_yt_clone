@@ -60,10 +60,19 @@ const VideoDetails = () => {
                         <div className="flex">
                             <div className="flex items-start">
                                 <div className="flex h-11 w-11 rounded-full overflow-hidden">
-                                    <img
-                                        className="h-full w-full object-cover"
-                                        src={video?.author?.avatar[0]?.url}
-                                    />
+                                    {video?.author?.avatar ? (
+                                        <img
+                                            className="h-full w-full object-cover"
+                                            src={video.author.avatar[0].url}
+                                            alt={video?.author?.title}
+                                        />
+                                    ) : (
+                                        <div className="h-full w-full bg-gray-500 flex items-center justify-center">
+                                            <span className="text-white text-xs">
+                                                No Avatar
+                                            </span>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             <div className="flex flex-col ml-3">
